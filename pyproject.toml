@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stakr"
+version = "0.1.0"
+description = "Bake 2D sprite stacks (and shadows) from voxel slice sheets."
+authors = [{name = "Tommy Bird"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = [
+    "pillow>=10.0.0",
+    "flet==0.28.2",
+    "rich>=13.7.0",
+]
+
+
+[project.urls]
+Repository = "https://github.com/tommycbird/stakr"
+
+[project.scripts]
+stakr      = "stakr.cli:main"
+stakr-gui  = "stakr.gui:run"
+
